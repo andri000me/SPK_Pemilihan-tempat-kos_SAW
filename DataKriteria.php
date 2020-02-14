@@ -69,13 +69,6 @@ if (empty($_SESSION['username'])) {
               <span class="nav-link-text">Data User</span>
             </a>
           </li>
-
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu">
-            <a class="nav-link" href="Perhitungan.php">
-              <i class="fa fa-fw fa-sitemap"></i>
-              <span class="nav-link-text">Perhitungan</span>
-            </a>
-          </li>
         </ul>
 
 
@@ -308,117 +301,108 @@ if (empty($_SESSION['username'])) {
 
                                   </tr>
                                 </thead>
-            <!-- <tfoot>
-              <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-            </tfoot> -->
-            <tbody>
-              <?php while ($row = mysqli_fetch_array($results)) { ?>
-                <tr>
-                  <td><?php echo $row['id_kriteria']; ?></td>
-                  <td><?php echo $row['Kode']; ?></td>
-                  <td><?php echo $row['Nama_Kriteria']; ?></td>
-                  <td><?php echo $row['Tipe']; ?></td>
-                  <td><?php echo $row['Bobot']; ?></td>
+                                
+                                <tbody>
+                                  <?php while ($row = mysqli_fetch_array($results)) { ?>
+                                    <tr>
+                                      <td><?php echo $row['id_kriteria']; ?></td>
+                                      <td><?php echo $row['Kode']; ?></td>
+                                      <td><?php echo $row['Nama_Kriteria']; ?></td>
+                                      <td><?php echo $row['Tipe']; ?></td>
+                                      <td><?php echo $row['Bobot']; ?></td>
 
-                  <td><a class="btn btn-warning" href="DataKriteria.php?ganti=<?php echo $row['id_kriteria']; ?>">Ubah</a>
-                    <a class="btn btn-danger" href="DataKriteria.php?id_kriteria=<?php echo $row['id_kriteria']; ?>">Hapus</a>
-                  </td>
-                <?php    }  ?>
-              </tbody>
-            </table>
-          </form>
-        </div>
-      </div>
-      <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-    </div>
-  </div>
-  <!-- /.container-fluid-->
-  <!-- /.content-wrapper-->
-  <footer class="sticky-footer">
-    <div class="container">
-      <div class="text-center">
-        <small>Copyright © Your Website 2019</small>
-      </div>
-    </div>
-  </footer>
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fa fa-angle-up"></i>
-  </a>
-  <!-- Logout Modal-->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-warning" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-danger" href="php/logout.php">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <!-- Page level plugin JavaScript-->
-  <script src="vendor/datatables/jquery.dataTables.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin.min.js"></script>
-  <!-- Custom scripts for this page-->
-  <script src="js/sb-admin-datatables.min.js"></script>
-</div>
-</body>
+                                      <td><a class="btn btn-warning" href="DataKriteria.php?ganti=<?php echo $row['id_kriteria']; ?>">Ubah</a>
+                                        <a class="btn btn-danger" href="DataKriteria.php?id_kriteria=<?php echo $row['id_kriteria']; ?>">Hapus</a>
+                                      </td>
+                                    <?php    }  ?>
+                                  </tbody>
+                                </table>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                        </div>
+                      </div>
+                      <!-- /.container-fluid-->
+                      <!-- /.content-wrapper-->
+                      <footer class="sticky-footer">
+                        <div class="container">
+                          <div class="text-center">
+                            <small>Copyright © Your Website 2019</small>
+                          </div>
+                        </div>
+                      </footer>
+                      <!-- Scroll to Top Button-->
+                      <a class="scroll-to-top rounded" href="#page-top">
+                        <i class="fa fa-angle-up"></i>
+                      </a>
+                      <!-- Logout Modal-->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                            <div class="modal-footer">
+                              <button class="btn btn-warning" type="button" data-dismiss="modal">Cancel</button>
+                              <a class="btn btn-danger" href="php/logout.php">Logout</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Bootstrap core JavaScript-->
+                      <script src="vendor/jquery/jquery.min.js"></script>
+                      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                      <!-- Core plugin JavaScript-->
+                      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+                      <!-- Page level plugin JavaScript-->
+                      <script src="vendor/datatables/jquery.dataTables.js"></script>
+                      <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+                      <!-- Custom scripts for all pages-->
+                      <script src="js/sb-admin.min.js"></script>
+                      <!-- Custom scripts for this page-->
+                      <script src="js/sb-admin-datatables.min.js"></script>
+                    </div>
+                  </body>
 
-</html>
+                  </html>
 
 
-<?php
+                  <?php
 
 
-if (isset($_GET['id_kriteria'])) {
-  $id = $_GET['id_kriteria'];
-  mysqli_query($conn, "DELETE FROM kriteria WHERE id_kriteria = $id");
+                  if (isset($_GET['id_kriteria'])) {
+                    $id = $_GET['id_kriteria'];
+                    mysqli_query($conn, "DELETE FROM kriteria WHERE id_kriteria = $id");
 
 
-  echo '<META HTTP-EQUIV="Refresh" Content="0; URL=DataKriteria.php">';
-}elseif (isset($_POST['simpan'])) {
+                    echo '<META HTTP-EQUIV="Refresh" Content="0; URL=DataKriteria.php">';
+                  }elseif (isset($_POST['simpan'])) {
  // $id = rand(999,90000);
-  $Kode = $_POST['Kode'];
-  $Nama_Kriteria = $_POST['Nama_Kriteria'];
-  $Tipe = $_POST['Tipe'];
-  $Bobot = $_POST['Bobot'];
+                    $Kode = $_POST['Kode'];
+                    $Nama_Kriteria = $_POST['Nama_Kriteria'];
+                    $Tipe = $_POST['Tipe'];
+                    $Bobot = $_POST['Bobot'];
 
-  mysqli_query($conn, "INSERT INTO kriteria VALUES (
-    NULL,'$Kode','$Nama_Kriteria','$Tipe','$Bobot')");
-  echo '<META HTTP-EQUIV="Refresh" Content="0; URL=DataKriteria.php">';
-}elseif (isset($_POST['ubah'])) {
-  $id = $_POST['id_kriteria'];
-  $Kode = $_POST['Kode'];
-  $Nama_Kriteria = $_POST['Nama_Kriteria'];
-  $Tipe = $_POST['Tipe'];
-  $Bobot = $_POST['Bobot'];
-  $sql = "UPDATE kriteria SET Kode='$Kode',
-  Nama_Kriteria='$Nama_Kriteria', Tipe='$Tipe', Bobot = '$Bobot' WHERE id_kriteria=$id";
-  mysqli_query($conn,$sql );
-  echo '<META HTTP-EQUIV="Refresh" Content="0; URL=DataKriteria.php">';
+                    mysqli_query($conn, "INSERT INTO kriteria VALUES (
+                      NULL,'$Kode','$Nama_Kriteria','$Tipe','$Bobot')");
+                    echo '<META HTTP-EQUIV="Refresh" Content="0; URL=DataKriteria.php">';
+                  }elseif (isset($_POST['ubah'])) {
+                    $id = $_POST['id_kriteria'];
+                    $Kode = $_POST['Kode'];
+                    $Nama_Kriteria = $_POST['Nama_Kriteria'];
+                    $Tipe = $_POST['Tipe'];
+                    $Bobot = $_POST['Bobot'];
+                    $sql = "UPDATE kriteria SET Kode='$Kode',
+                    Nama_Kriteria='$Nama_Kriteria', Tipe='$Tipe', Bobot = '$Bobot' WHERE id_kriteria=$id";
+                    mysqli_query($conn,$sql );
+                    echo '<META HTTP-EQUIV="Refresh" Content="0; URL=DataKriteria.php">';
    //   
   // echo $sql;
 
-} }
-?>
+                  } }
+                  ?>

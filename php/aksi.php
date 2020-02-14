@@ -89,6 +89,7 @@ else {
    session_start(); // memulai fungsi session
    $_SESSION['username'] = $username;
    $_SESSION['nama_user'] = $row['nama_user'];
+   $_SESSION['level'] = $row['status'];
    header("location:../dashboard.php"); // jika berhasil login, maka masuk ke file home.php
    }
    else {

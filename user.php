@@ -69,13 +69,6 @@ include 'php/koneksi.php';
             <span class="nav-link-text">Data User</span>
           </a>
         </li>
-
-         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu">
-          <a class="nav-link" href="Perhitungan.php">
-            <i class="fa fa-fw fa-sitemap"></i>
-            <span class="nav-link-text">Perhitungan</span>
-          </a>
-        </li>
       </ul>
 
 

@@ -5,6 +5,15 @@ include 'php/koneksi.php';
  header("location:index.php"); // jika belum login, maka dikembalikan ke file form_login.php
  } else {?>
 
+<?php 
+  session_start();
+ 
+  // cek apakah yang mengakses halaman ini sudah login
+  if($_SESSION['level']==""){
+    header("location:index.php?pesan=gagal");
+  }
+ 
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -433,7 +442,7 @@ include 'php/koneksi.php';
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>Copyright © Your Website 2019</small>
+          <small>Copyright Mr.Limbo 2020</small>
         </div>
       </div>
     </footer>
